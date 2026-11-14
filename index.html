@@ -1,1 +1,351 @@
-<TITle>hello</TITle>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CODE STARTER | Learn Coding</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080b12;--panel:#111725;--border:#242e40;--text:#f1f5ff;--muted:#91a0b7;--blue:#5b8cff;--green:#49d6a0}
+body{background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+header{height:72px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 7%;position:sticky;top:0;background:#080b12ed;z-index:10}
+.logo{font-size:21px;font-weight:900;letter-spacing:1px}
+.logo span{color:var(--blue)}
+nav{display:flex;gap:23px}
+nav a{color:var(--muted);text-decoration:none;font-size:14px}
+nav a:hover{color:white}
+.hero{padding:85px 8% 65px;text-align:center;background:radial-gradient(ellipse at top,#182a50,transparent 65%)}
+.tag{color:var(--green);font-size:12px;letter-spacing:3px;font-weight:bold}
+h1{font-size:clamp(38px,7vw,72px);margin:20px 0}
+h1 span{color:var(--blue)}
+.hero p{color:var(--muted);max-width:580px;margin:auto;line-height:1.8}
+.btn{display:inline-block;background:var(--blue);color:white;border:0;padding:14px 24px;border-radius:9px;font-weight:bold;text-decoration:none;cursor:pointer;margin-top:25px}
+.btn:hover{filter:brightness(1.15)}
+.container{max-width:1150px;margin:auto;padding:55px 22px}
+.section-title{font-size:28px;margin-bottom:10px}
+.sub{color:var(--muted);margin-bottom:27px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:17px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:13px;padding:23px}
+.card h3{margin:12px 0}
+.card p{color:var(--muted);font-size:14px;line-height:1.7}
+.icon{font-size:28px}
+.pill{font-size:11px;color:var(--green);background:#17372f;padding:6px 10px;border-radius:20px}
+.lesson{margin-top:18px}
+.lesson h3{margin-bottom:12px}
+.lesson p{margin:12px 0}
+pre{background:#080d17;border:1px solid var(--border);border-radius:9px;padding:17px;overflow:auto;color:#a9c6ff;font-size:13px;line-height:1.8;margin:13px 0;white-space:pre}
+.code-head{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}
+.copy{background:#253653;color:white;border:0;padding:7px 12px;border-radius:6px;cursor:pointer}
+.shortcut{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 0;border-bottom:1px solid var(--border)}
+kbd{background:#25334a;color:white;border:1px solid #40516c;padding:6px 9px;border-radius:6px;font-size:12px;white-space:nowrap}
+.shortcut small{color:var(--muted)}
+input,select,textarea{background:#080d17;color:white;border:1px solid var(--border);border-radius:8px;padding:12px;width:100%;outline:none;margin:9px 0}
+textarea{min-height:115px;resize:vertical;font-family:monospace}
+input:focus,textarea:focus{border-color:var(--blue)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.tab{background:#172237;color:white;border:1px solid var(--border);padding:10px 16px;border-radius:8px;cursor:pointer}
+.tab.active{background:var(--blue)}
+.hidden{display:none}
+.quiz-option{display:block;width:100%;text-align:left;background:#182338;border:1px solid var(--border);color:white;padding:14px;border-radius:8px;margin:9px 0;cursor:pointer}
+.quiz-option:hover{border-color:var(--blue)}
+#result{margin-top:15px;color:var(--green);font-weight:bold}
+.progress{height:9px;background:#253047;border-radius:20px;margin:14px 0;overflow:hidden}
+.progress div{height:100%;width:0;background:var(--green);transition:.3s}
+footer{text-align:center;padding:35px;color:var(--muted);border-top:1px solid var(--border)}
+.search{max-width:430px}
+.highlight{color:var(--green)}
+@media(max-width:650px){header{padding:0 4%;height:auto;min-height:65px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}nav{gap:12px;flex-wrap:wrap;margin-top:12px}nav a{font-size:12px}.container{padding:38px 16px}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">CODE<span>STARTER.</span></div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#learn">Learn</a>
+  <a href="#shortcuts">Shortcuts</a>
+  <a href="#practice">Practice</a>
+  <a href="#quiz">Quiz</a>
+ </nav>
+</header>
+
+<section class="hero" id="home">
+ <div class="tag">YOUR CODING JOURNEY STARTS HERE</div>
+ <h1>Learn to <span>CODE.</span></h1>
+ <p>From knowing absolutely nothing to building your own websites. Learn coding, discover keyboard tricks and practise your skills.</p>
+ <a class="btn" href="#learn">START LEARNING →</a>
+</section>
+
+<section class="container" id="learn">
+ <h2 class="section-title">01. Choose your language</h2>
+ <p class="sub">Learn the three main technologies used to build websites.</p>
+ <div class="grid">
+  <div class="card">
+   <div class="icon">🌐</div>
+   <h3>HTML</h3>
+   <span class="pill">STRUCTURE</span>
+   <p>HTML creates the content of a website: headings, paragraphs, images and buttons.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🎨</div>
+   <h3>CSS</h3>
+   <span class="pill">DESIGN</span>
+   <p>CSS controls colours, layouts, animations, fonts and the appearance of your website.</p>
+  </div>
+  <div class="card">
+   <div class="icon">⚡</div>
+   <h3>JavaScript</h3>
+   <span class="pill">FUNCTIONALITY</span>
+   <p>JavaScript makes websites interactive with buttons, games, menus and more.</p>
+  </div>
+ </div>
+
+ <div class="card lesson">
+  <h3>🚀 How to start your first HTML code</h3>
+  <p><b>Step 1:</b> Open Visual Studio Code.</p>
+  <p><b>Step 2:</b> Create a new file using <kbd>Ctrl + N</kbd>.</p>
+  <p><b>Step 3:</b> Save it as <kbd>index.html</kbd> using <kbd>Ctrl + S</kbd>.</p>
+  <p><b>Step 4:</b> Type <kbd>!</kbd> and press <kbd>Enter</kbd> to expand the HTML starter template using Emmet.</p>
+  <p><b>Step 5:</b> Start writing your code!</p>
+  <div class="code-head"><span>YOUR FIRST HTML CODE</span><button class="copy" onclick="copyCode('first')">COPY</button></div>
+  <pre id="first">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;p&gt;I am learning to code.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+ </div>
+
+ <h2 class="section-title" style="margin-top:45px">02. HTML basics</h2>
+ <p class="sub">Learn what the most useful HTML tags do.</p>
+ <div class="grid">
+  <div class="card"><h3>Heading</h3><pre>&lt;h1&gt;Hello!&lt;/h1&gt;</pre><p>Creates a heading.</p></div>
+  <div class="card"><h3>Paragraph</h3><pre>&lt;p&gt;My text&lt;/p&gt;</pre><p>Creates a paragraph.</p></div>
+  <div class="card"><h3>Button</h3><pre>&lt;button&gt;Click me&lt;/button&gt;</pre><p>Creates a button.</p></div>
+  <div class="card"><h3>Image</h3><pre>&lt;img src="photo.jpg"&gt;</pre><p>Displays an image.</p></div>
+  <div class="card"><h3>Link</h3><pre>&lt;a href="https://example.com"&gt;Visit&lt;/a&gt;</pre><p>Creates a clickable link.</p></div>
+  <div class="card"><h3>Division</h3><pre>&lt;div&gt;Content&lt;/div&gt;</pre><p>Groups elements together.</p></div>
+ </div>
+
+ <h2 class="section-title" style="margin-top:45px">03. CSS tricks</h2>
+ <div class="grid">
+  <div class="card"><h3>Change colour</h3><pre>color: red;</pre><p>Changes text colour.</p></div>
+  <div class="card"><h3>Background</h3><pre>background: black;</pre><p>Changes background colour.</p></div>
+  <div class="card"><h3>Rounded corners</h3><pre>border-radius: 15px;</pre><p>Makes corners rounded.</p></div>
+  <div class="card"><h3>Spacing</h3><pre>padding: 20px;
+margin: 10px;</pre><p>Controls spacing.</p></div>
+ </div>
+
+ <h2 class="section-title" style="margin-top:45px">04. JavaScript basics</h2>
+ <div class="card lesson">
+  <h3>Variables</h3>
+  <pre>let username = "Malik";
+let age = 13;</pre>
+  <p>Variables store information.</p>
+  <h3>Functions</h3>
+  <pre>function sayHello() {
+  alert("Hello!");
+}</pre>
+  <p>Functions let you reuse instructions.</p>
+  <h3>Button interaction</h3>
+  <pre>&lt;button onclick="sayHello()"&gt;
+ Click me
+&lt;/button&gt;
+
+&lt;script&gt;
+function sayHello() {
+ alert("Hello World!");
+}
+&lt;/script&gt;</pre>
+  <p>This makes a button display a message when clicked.</p>
+ </div>
+</section>
+
+<section class="container" id="shortcuts">
+ <h2 class="section-title">05. Keyboard shortcuts ⚡</h2>
+ <p class="sub">Windows shortcuts for Visual Studio Code. Search for any shortcut below.</p>
+ <input class="search" id="shortcutSearch" placeholder="🔍 Search shortcuts..." oninput="filterShortcuts()">
+ <div class="grid" id="shortcutGrid">
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + A</kbd><small>Select all code</small></div><p>Selects everything in the current editor.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + C</kbd><small>Copy</small></div><p>Copies selected code.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + V</kbd><small>Paste</small></div><p>Pastes copied code.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + X</kbd><small>Cut</small></div><p>Cuts selected code.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + Z</kbd><small>Undo</small></div><p>Reverses your last action.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + Y</kbd><small>Redo</small></div><p>Restores an undone action.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + S</kbd><small>Save</small></div><p>Saves your current file.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + N</kbd><small>New file</small></div><p>Creates a new file.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + /</kbd><small>Comment</small></div><p>Toggles a line comment.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + F</kbd><small>Find</small></div><p>Searches for text in your code.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + H</kbd><small>Replace</small></div><p>Finds and replaces text.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + 1</kbd><small>Editor group 1</small></div><p>Focuses the first editor group. It does NOT start coding.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + 2</kbd><small>Editor group 2</small></div><p>Focuses the second editor group.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + Shift + P</kbd><small>Command palette</small></div><p>Searches VS Code commands.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + `</kbd><small>Terminal</small></div><p>Opens or closes the integrated terminal.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Alt + ↑ / ↓</kbd><small>Move line</small></div><p>Moves a line up or down.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + Shift + K</kbd><small>Delete line</small></div><p>Deletes the current line.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Shift + Alt + F</kbd><small>Format code</small></div><p>Formats the document when a formatter is available.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + Space</kbd><small>Suggestions</small></div><p>Shows code completion suggestions.</p></div>
+  <div class="card shortcut-item"><div class="shortcut"><kbd>Ctrl + P</kbd><small>Quick open</small></div><p>Quickly opens a file.</p></div>
+ </div>
+ <p class="sub" style="margin-top:15px">Shortcut reference: <a href="https://code.visualstudio.com/docs/configure/keybindings" target="_blank" style="color:#80aaff">Official VS Code documentation ↗</a></p>
+</section>
+
+<section class="container" id="practice">
+ <h2 class="section-title">06. Coding playground 💻</h2>
+ <p class="sub">Write HTML and see what your code actually looks like!</p>
+ <div class="card">
+  <div class="code-head"><b>HTML EDITOR</b><button class="copy" onclick="runCode()">▶ RUN CODE</button></div>
+  <textarea id="editor" spellcheck="false">&lt;h1&gt;Hello Malik!&lt;/h1&gt;
+&lt;p&gt;I am a programmer.&lt;/p&gt;
+&lt;button onclick="alert('You did it!')"&gt;Click me&lt;/button&gt;</textarea>
+  <p style="color:var(--muted);font-size:12px">Your code runs in a separate preview below.</p>
+  <iframe id="preview" title="Code preview" sandbox="allow-scripts" style="width:100%;height:240px;background:white;border:0;border-radius:9px;margin-top:15px"></iframe>
+ </div>
+</section>
+
+<section class="container" id="quiz">
+ <h2 class="section-title">07. Test your coding knowledge 🧠</h2>
+ <p class="sub">Answer the questions and see how much you've learned.</p>
+ <div class="card">
+  <div id="question"></div>
+  <div id="answers"></div>
+  <p id="result"></p>
+  <button class="btn" id="next" onclick="nextQuestion()" style="display:none">NEXT QUESTION →</button>
+  <p id="score" style="margin-top:15px;color:var(--muted)"></p>
+ </div>
+</section>
+
+<section class="container">
+ <h2 class="section-title">08. Your progress 🏆</h2>
+ <div class="card">
+  <h3 id="progressText">0 / 5 lessons completed</h3>
+  <div class="progress"><div id="progressBar"></div></div>
+  <div id="lessons"></div>
+ </div>
+</section>
+
+<footer>
+ <div class="logo">CODE<span>STARTER.</span></div>
+ <p style="margin-top:12px">Learn. Practise. Build. Repeat.</p>
+ <p style="margin-top:8px;font-size:12px">Made for future developers.</p>
+</footer>
+
+<script>
+function copyCode(id){
+ const el=document.getElementById(id);
+ navigator.clipboard.writeText(el.innerText)
+ .then(()=>alert("Code copied!"))
+ .catch(()=>alert("Copy isn't available in this browser."));
+}
+
+function filterShortcuts(){
+ const q=document.getElementById("shortcutSearch").value.toLowerCase();
+ document.querySelectorAll(".shortcut-item").forEach(card=>{
+  card.classList.toggle("hidden",!card.innerText.toLowerCase().includes(q));
+ });
+}
+
+function runCode(){
+ const code=document.getElementById("editor").value;
+ const doc=document.getElementById("preview").contentDocument;
+ doc.open();
+ doc.write(code);
+ doc.close();
+}
+
+const questions=[
+ {q:"What does HTML stand for?",a:["HyperText Markup Language","HighText Machine Language","Home Tool Markup Language"],c:0},
+ {q:"Which tag creates a heading?",a:["<p>","<h1>","<img>"],c:1},
+ {q:"What does CSS control?",a:["Website design","Database storage","Computer hardware"],c:0},
+ {q:"Which shortcut saves your file?",a:["Ctrl + A","Ctrl + Z","Ctrl + S"],c:2},
+ {q:"What does JavaScript do?",a:["Only changes fonts","Makes websites interactive","Creates folders"],c:1},
+ {q:"Which tag creates a paragraph?",a:["<p>","<h1>","<button>"],c:0},
+ {q:"What does Ctrl + 1 do in VS Code?",a:["Starts HTML","Focuses the first editor group","Saves the file"],c:1},
+ {q:"Which symbol starts a CSS ID selector?",a:[".","#","@"],c:1},
+ {q:"What is a JavaScript variable?",a:["A way to store information","A picture","A website link"],c:0},
+ {q:"What does Ctrl + / do?",a:["Deletes everything","Comments/uncomments a line","Opens a new window"],c:1}
+];
+
+let current=0,points=0,answered=false;
+
+function showQuestion(){
+ answered=false;
+ const q=questions[current];
+ document.getElementById("question").innerHTML="<h3>Question "+(current+1)+" / "+questions.length+"</h3><p style='margin-top:15px'>"+q.q+"</p>";
+ document.getElementById("answers").innerHTML="";
+ q.a.forEach((answer,i)=>{
+  const btn=document.createElement("button");
+  btn.className="quiz-option";
+  btn.textContent=answer;
+  btn.onclick=()=>answerQuestion(i,btn);
+  document.getElementById("answers").appendChild(btn);
+ });
+ document.getElementById("result").textContent="";
+ document.getElementById("next").style.display="none";
+ document.getElementById("score").textContent="Score: "+points;
+}
+
+function answerQuestion(i,btn){
+ if(answered)return;
+ answered=true;
+ const correct=questions[current].c;
+ if(i===correct){
+  points++;
+  document.getElementById("result").textContent="✓ Correct! Great job!";
+ }else{
+  document.getElementById("result").textContent="✗ Not quite! Correct answer: "+questions[current].a[correct];
+ }
+ document.getElementById("answers").querySelectorAll("button").forEach(b=>b.disabled=true);
+ document.getElementById("next").style.display="inline-block";
+ document.getElementById("score").textContent="Score: "+points;
+}
+
+function nextQuestion(){
+ current++;
+ if(current>=questions.length){
+  document.getElementById("question").innerHTML="<h3>Quiz completed! 🎉</h3><p>You scored "+points+" out of "+questions.length+".</p>";
+  document.getElementById("answers").innerHTML="";
+  document.getElementById("next").style.display="none";
+  document.getElementById("result").textContent=points>=8?"Excellent work!":"Keep practising. You can do it!";
+  return;
+ }
+ showQuestion();
+}
+
+const lessonNames=["Learn HTML","Learn CSS","Learn JavaScript","Master keyboard shortcuts","Complete the quiz"];
+let completed=JSON.parse(localStorage.getItem("codeStarterProgress")||"[]");
+
+function renderProgress(){
+ document.getElementById("lessons").innerHTML="";
+ lessonNames.forEach((name,i)=>{
+  const label=document.createElement("label");
+  label.style.display="block";
+  label.style.padding="10px 0";
+  const checkbox=document.createElement("input");
+  checkbox.type="checkbox";
+  checkbox.style.width="auto";
+  checkbox.checked=completed.includes(i);
+  checkbox.onchange=()=>{
+   if(checkbox.checked)completed.push(i);
+   else completed=completed.filter(x=>x!==i);
+   localStorage.setItem("codeStarterProgress",JSON.stringify(completed));
+   renderProgress();
+  };
+  label.append(checkbox," "+name);
+  document.getElementById("lessons").appendChild(label);
+ });
+ document.getElementById("progressText").textContent=completed.length+" / 5 lessons completed";
+ document.getElementById("progressBar").style.width=(completed.length/5*100)+"%";
+}
+showQuestion();
+renderProgress();
+runCode();
+</script>
+</body>
+</html>
